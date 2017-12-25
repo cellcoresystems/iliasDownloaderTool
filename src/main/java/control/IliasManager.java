@@ -1,6 +1,8 @@
 package control;
 
 import org.apache.http.impl.client.CloseableHttpClient;
+
+import plugin.FreiburgIlias;
 import plugin.IliasPlugin;
 import plugin.IliasPlugin.LoginStatus;
 import plugin.KITIlias;
@@ -11,8 +13,9 @@ public class IliasManager {
 	private static IliasManager iliasManager;
 
 	private IliasManager() {
-		this.ilias = new KITIlias();
+//		this.ilias = new KITIlias();
 //		this.ilias = new TuebIlias();
+		this.ilias = new FreiburgIlias();
 	}
 
 	public static IliasManager getInstance() {
